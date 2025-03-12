@@ -66,4 +66,4 @@ clrButton.addEventListener("click", () => {
     // Return to homepage
     window.location.href = "/";
 });
-// TODO: Create functions for button toggling
+// TODO: Create functions for button toggling, Fix buttons not disabling properly
