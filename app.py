@@ -41,7 +41,7 @@ def divide(a: int, b: int):
     try:
         result: str = str(a/b)
     except ZeroDivisionError: # Handle zero division attempts
-        return "You can't divide by zero!"
+        return render_template("zero_div_err.html")
     return render_template("divide.html", a=a,
      b=b, result=result)
 
