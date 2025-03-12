@@ -13,6 +13,11 @@ app = Flask(__name__)
 
 ##### Define Routes for Operations #####
 
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
 @app.route("/add/<int:a>/<int:b>")
 def add(a: int, b: int):
     result: str = str(a+b)
@@ -36,7 +41,7 @@ def divide(a: int, b: int):
     try:
         result: str = str(a/b)
     except ZeroDivisionError: # Handle zero division attempts
-        return "<h1>You can't divide by zero!</h1>"
+        return "You can't divide by zero!"
     return render_template("divide.html", a=a,
      b=b, result=result)
 

@@ -1,0 +1,36 @@
+#calculator {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 240px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    background-color: gray;
+}
+
+#input_box {
+    border: 1px solid gray;
+    border-radius: 2px;
+    height: 10%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    /* width: 85%; */
+    background-color: rgb(43, 40, 40);
+}
+
+.numButton, .opButton {
+    width: 30%;
+}
+

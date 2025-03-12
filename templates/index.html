@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>{% block title %}Calculator{% endblock %}</title>
+    </head>
+    <body>
+        <div id="calculator">
+            <!-- Input box -->
+             <div id="input_box">
+                <div id="op_a"></div>
+                <div id="operand"></div>
+                <div id="op_b"></div>
+                {% block content %}{% endblock %}
+             </div>
+            <!-- Container for buttons -->
+            <div id="buttons">
+                <input type="button" class="numButton" value="0" id="button0">
+                <input type="button" class="numButton" value="1" id="button1">
+                <input type="button" class="numButton" value="2" id="button2">
+                <input type="button" class="numButton" value="3" id="button3">
+                <input type="button" class="numButton" value="4" id="button4">
+                <input type="button" class="numButton" value="5" id="button5">
+                <input type="button" class="numButton" value="6" id="button6">
+                <input type="button" class="numButton" value="7" id="button7">
+                <input type="button" class="numButton" value="8" id="button8">
+                <input type="button" class="numButton" value="9" id="button9">
+                <input type="button" value="Enter" id="enterButt">
+                <input type="button" value="+" class="opButton" id="add">
+                <input type="button" value="-" class="opButton" id="subtract">
+                <input type="button" value="*" class="opButton" id="multiply">
+                <input type="button" value="/" class="opButton" id="divide">
+            </div>
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>

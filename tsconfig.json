@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "outDir": "./static",  // Output JS files to the static folder
+      "rootDir": "./static", // Read TS files from static folder
+      "strict": true
+    },
+    "include": ["static/**/*.ts"],  // Only compile TypeScript files in static/
+  "exclude": ["node_modules"]
+  }
+  

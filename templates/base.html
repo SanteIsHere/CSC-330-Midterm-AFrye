@@ -3,9 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/style.css">
         <title>{% block title %}Calculator{% endblock %}</title>
     </head>
     <body>
-        {% block content %}{% endblock %}
+        <div id="calculator">
+            <!-- Input box -->
+             <div id="input_box">
+                <div id="op_a"></div>
+                <div id="operand"></div>
+                <div id="op_b"></div>
+                {% block content %}{% endblock %}
+             </div>
+            <!-- Container for buttons -->
+            <div id="buttons">
+                <input type="button" class="button" value="0" id="button0">
+                <input type="button" class="button" value="1" id="button1">
+                <input type="button" class="button" value="2" id="button2">
+                <input type="button" class="button" value="3" id="button3">
+                <input type="button" class="button" value="4" id="button4">
+                <input type="button" class="button" value="5" id="button5">
+                <input type="button" class="button" value="6" id="button6">
+                <input type="button" class="button" value="7" id="button7">
+                <input type="button" class="button" value="8" id="button8">
+                <input type="button" class="button" value="9" id="button9">
+                <input type="button" value="Enter">
+                <input type="button" value="+" class="button" id="add">
+                <input type="button" value="-" class="button" id="sub">
+                <input type="button" value="*" class="button" id="mult">
+                <input type="button" value="/" class="button" id="div">
+            </div>
+        </div>
     </body>
 </html>
