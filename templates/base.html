@@ -11,11 +11,16 @@
     </head>
     </div>
     <body>
-        <header>
+        <header onclick="window.location.href = '/'" title="Back to Homepage">
             <h3 id="app-name">Simple Calculator</h3>
             <img src="{{ url_for('static', filename='icons/icons8-math-80.png') }}" id="banner-icon">
         </header>
         <main>
+            <p>A simple calculator supporting addition, subtraction, multiplication, and division.</p>
+            <p>(1) Either use the provided inputs and buttons to carry out operations.<br>(2) Or specify an operation
+                with operands in the URL. E.g '/add/1/2' or '/divide/10/5'.
+            <p>NOTE: Using option 2 will require manual navigation back to homepage (Click on banner).</p>
+            </p>
             <input type="text" name="op_a" id="op_a" {% if disable_inputs %}disabled{% endif %}>
             <select name="ops" id="op-select" {% if disable_inputs %}disabled{% endif %}>
                 <option value="+">+</option>
@@ -31,6 +36,8 @@
         </main>
         <footer>
             <p>Made with <i class="fa-solid fa-heart" style="color: red;"></i> by Asante Frye</p>
+            <!-- Credit to Icons8 for math icon -->
+            <a target="_blank" href="https://icons8.com/icon/78038/math">Math</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
         </footer>
     </body>
     <!-- Link to JavaScript file - used for click events and logic -->

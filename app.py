@@ -19,6 +19,7 @@ def home():
     return render_template("base.html")
 
 ##### Define Routes for Operations #####
+
 @app.route("/add/<int:a>/<int:b>")
 def add(a: int, b: int):
     result: str = str(a+b)
@@ -40,7 +41,7 @@ def multiply(a: int, b: int):
 @app.route("/divide/<int:a>/<int:b>")
 def divide(a: int, b: int):
     try:
-        result: str = str(a/b)
+        result: str = f"{(a/b):.3f}" # Set precision to three decimal places
     except ZeroDivisionError: # Handle zero division attempts
         return render_template("zero_div_err.html")
     return render_template("divide.html", a=a,

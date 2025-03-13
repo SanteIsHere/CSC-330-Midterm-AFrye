@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (sessionStorage.getItem("redirect") === "true") {
         sessionStorage.setItem("redirect", "false");
         setTimeout(() => {
+            // Return to homepage (after 2 sec timeout)
             window.location.href = "/";
-        }, 7000)
+        }, 1000)
     }
 });
