@@ -1,0 +1,48 @@
+/* Container for inputs */
+#input-box {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Error message (if user does not provide both operands) */
+#error-msg {
+    display: none;
+}
+
+/* App title and icon container */
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: fit-content;
+    max-height: fit-content;
+    align-items: center;
+    grid-area: header;
+}
+
+footer {
+    background-color: lightgray;
+    grid-area: footer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header"
+    "main"
+    "footer";
+    gap: 30px;
+    height: 100vh;
+}
+
+main {
+    grid-area: main;
+}
+
+#banner-icon {
+    height: 40px;
+}

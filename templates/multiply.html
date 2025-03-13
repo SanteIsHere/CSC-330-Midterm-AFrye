@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ a }} * {{ b }} = {{ result }}</h1>
+<!-- Set `data-redirect` attribute to 'true' to indicate a page redirection -->
+<body data-redirect="true">
+    {{ a }} * {{ b }} = {{ result }}
+</body>
 {% endblock %}

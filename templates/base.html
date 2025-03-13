@@ -3,9 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Calculator{% endblock %}</title>
+        <!-- FontAwesome icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- Link to CSS stylesheet -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>{% block title %}Simple Calculator{% endblock %}</title>
     </head>
+    </div>
     <body>
-        {% block content %}{% endblock %}
+        <header>
+            <h3 id="app-name">Simple Calculator</h3>
+            <img src="{{ url_for('static', filename='icons/icons8-math-80.png') }}" id="banner-icon">
+        </header>
+        <main>
+            <input type="text" name="op_a" id="op_a" {% if disable_inputs %}disabled{% endif %}>
+            <select name="ops" id="op-select" {% if disable_inputs %}disabled{% endif %}>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="*">*</option>
+            </select>
+            <input type="text" name="op_b" id="op_b" {% if disable_inputs %}disabled{% endif %}>
+            <input type="button" value="=" id="eq-butt" {% if disable_inputs %}disabled{% endif %}>
+            <p id="error-msg">Please provide BOTH operands first!</p>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
+            <p>Made with <i class="fa-solid fa-heart" style="color: red;"></i> by Asante Frye</p>
+        </footer>
     </body>
+    <!-- Link to JavaScript file - used for click events and logic -->
+    <script src="{{ url_for('static', filename='script.js')  }}"></script>
 </html>
